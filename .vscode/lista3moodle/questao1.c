@@ -8,8 +8,7 @@ int main(void) {
     int i = 0;
     char c;
 
-    while (c != '\n') {
-        c = getchar();
+    while ((c = getchar()) != '\n' && c != EOF) {
         original = realloc(original, (i + 1) * sizeof(char));
         
         original[i] = c;
